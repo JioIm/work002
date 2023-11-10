@@ -37,4 +37,17 @@ $(function (){
     $('.MainProduct .arrows .right').on('click', function(){
         $('.left_slide').slick('slickNext');
     });
+
+    $('.totop').on('click', function(){
+        $('html, body').animate({scrollTop : 0}, 1000)
+    });
+
+    $(window).on('scroll', function(){
+        const sct = $(window).scrollTop();
+        if(sct > 200) {
+            $('.totop').addClass('on');
+        } else {
+            $('.totop').removeClass('on');
+        }
+    });
 })

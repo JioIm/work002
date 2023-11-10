@@ -548,3 +548,32 @@ transition: 5s;
     font-weight: 300;
     margin: 0 20px 0 0 ;
 }
+
+.totop {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 999;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.5s;
+
+    background: transparent;
+    border: none;
+}
+
+.totop.on {
+    visibility: visible;
+    opacity: 1;
+}
+
+.totop i {
+    background: #333;
+    color: #fff;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
