@@ -15,16 +15,26 @@ $(function (){
         pauseOnFocus: false
     });
 
-    $('.main_product_slide').slick({
-        slidesToShow: 5,
+    // $('.main_product_slide').slick({
+    //     slidesToShow: 6,
+    //     arrows: false,
+    //     dots: false
+    // });
+
+    $('.left_slide').slick({
         arrows: false,
-        dots: true
+        fade: true,
+        asNavFor: '.right_slide',
+    });
+    $('.right_slide').slick({
+        arrows: false,
+        slidesToShow: 6,
     });
 
-    $('.MainProduct .arrows .left').on('click', function(){
-        $('.main_product_slide').slick('slickPrev');
+    $('.MainProduct .inner .arrows .left').on('click', function(){
+        $('.left_slide').slick('slickPrev');
     });
     $('.MainProduct .arrows .right').on('click', function(){
-        $('.main_product_slide').slick('slickNext');
+        $('.left_slide').slick('slickNext');
     });
 })
